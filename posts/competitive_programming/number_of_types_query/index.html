@@ -4,19 +4,19 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Donutsプロコンチャレンジ2015 C - 行列のできるドーナツ屋 - fumiphys&#39; blog</title>
+	<title>区間の種類数を答えるクエリ - fumiphys&#39; blog</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Donutsプロコンチャレンジ2015 C - 行列のできるドーナツ屋">
-	<meta property="og:title" content="Donutsプロコンチャレンジ2015 C - 行列のできるドーナツ屋" />
-<meta property="og:description" content="Donutsプロコンチャレンジ2015 C - 行列のできるドーナツ屋" />
+	<meta name="description" content="区間の種類数を答えるクエリ">
+	<meta property="og:title" content="区間の種類数を答えるクエリ" />
+<meta property="og:description" content="区間の種類数を答えるクエリ" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://fumiphys.github.io/posts/competitive_programming/donuts_2015_3/" />
-<meta property="article:published_time" content="2020-03-30T18:30:25+09:00" />
-<meta property="article:modified_time" content="2020-03-30T18:30:25+09:00" />
+<meta property="og:url" content="https://fumiphys.github.io/posts/competitive_programming/number_of_types_query/" />
+<meta property="article:published_time" content="2020-03-30T19:53:20+09:00" />
+<meta property="article:modified_time" content="2020-03-30T19:53:20+09:00" />
 
 	<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Donutsプロコンチャレンジ2015 C - 行列のできるドーナツ屋"/>
-<meta name="twitter:description" content="Donutsプロコンチャレンジ2015 C - 行列のできるドーナツ屋"/>
+<meta name="twitter:title" content="区間の種類数を答えるクエリ"/>
+<meta name="twitter:description" content="区間の種類数を答えるクエリ"/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -60,7 +60,7 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Donutsプロコンチャレンジ2015 C - 行列のできるドーナツ屋</h1>
+			<h1 class="post__title">区間の種類数を答えるクエリ</h1>
 			
 		</header>
 <div class="post__toc toc">
@@ -68,34 +68,51 @@
 	<div class="toc__menu">
 		<nav id="TableOfContents">
   <ul>
-    <li><a href="#問題概要">問題概要</a></li>
-    <li><a href="#解法">解法</a></li>
-    <li><a href="#提出コード">提出コード</a></li>
+    <li><a href="#問題設定">問題設定</a></li>
+    <li><a href="#考え方">考え方</a></li>
+    <li><a href="#方針">方針</a></li>
+    <li><a href="#類題">類題</a></li>
+    <li><a href="#参考">参考</a></li>
   </ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
-			<p>このサイトはブログを書く練習用に作成されました．</p>
-<h2 id="問題概要">問題概要</h2>
+			<h2 id="問題設定">問題設定</h2>
+<p>以下のようなクエリを考えます．</p>
 <ul>
-<li><a href="https://atcoder.jp/contests/donuts-2015/tasks/donuts_2015_3">Link</a></li>
-<li>\(n\)要素の数列\(h\)が与えられる．各\(i(0\leq i &lt; n)\)について、\(0\leq j &lt; i\)かつ、\(j &lt; k &lt; i\)を満たす全ての\(k\)について\(h_{j} &gt; h_{k}\) を満たすものの個数を求めよ．</li>
+<li>\(n\)要素の配列\(a\)が与えられる．</li>
+<li>各クエリでは、\([L, R)\)に含まれる数列\(a\)のdistinctな要素数を答える．</li>
+<li>配列への更新があっても解けると思いますが、配列への更新はない簡単な問題を考えます．</li>
 </ul>
-<h2 id="解法">解法</h2>
-<p>まず、\(O(N^2)\)での解法を考える．</p>
+<p>制約</p>
 <ul>
-<li>\(i\)番目の要素について考えたときに、\(i-1\)番目の要素から順に、自分より左にあり、自分より高い要素に移動していくことを考えると、この移動回数(\(i-1\)への移動も1と数える)が答えである．</li>
-<li>よって、\(i-1\)から初めて、最大値を保持しながら左の要素を見ていけば\(O(N^2)\)で計算できる．</li>
+<li>\(1 \leq n \leq 10^5\)</li>
+<li>\(0 \leq a_i &lt; n\)</li>
+<li>\(1 \leq Q \leq 10^5\)</li>
 </ul>
-<p>次に、上の解法の計算量を改善することを考える．</p>
+<h2 id="考え方">考え方</h2>
 <ul>
-<li>自分より左にあって自分より高い要素を順に全て数えていくのは無駄で、自分の左にある次に大きい要素が\(k\)番目だとすると、答えは\(k\)番目の答えに1を足したものになる．</li>
-<li>あとは自分より左にあって自分より大きい最左の要素が分かればよく、セグメントツリーかsetを用いて、大きい要素から見ていけば達成できる．</li>
+<li>\([L, R)\)の要素数から、重複している分を引けば良い．</li>
+<li>区間を左から見たときに、すでに出てきている要素を引くと考えても良い.</li>
+<li>すでに\(x\)が出てきている: 1つ前の\(x\)が区間に含まれている．</li>
 </ul>
-<h2 id="提出コード">提出コード</h2>
+<h2 id="方針">方針</h2>
 <ul>
-<li><a href="https://atcoder.jp/contests/donuts-2015/submissions/11354506">Link</a></li>
+<li>各インデックス\(i\)について、\(a_i = a_j, j &lt; i\)となる最大の\(j\)を\(p_i\)とする．</li>
+<li>区間内に\(p_i\)がすでに出てきた: \(L \leq p_i\)である、なので\([L, R)\)に含まれる区間\([p_i, i]\)の個数を\([L, R)\)の要素数から引けば良い．</li>
+<li>区間に含まれる区間の個数は2次元のセグメント木を用いると各クエリ\(O(log^2(N))\)で計算できるので各クエリ\(O(log^2(N))\)で種類数が分かる．</li>
+<li>2次元セグメント木において、全要素を陽に持つとMLEするので、クエリで必要なところだけ持つようにした方が良い．</li>
+</ul>
+<h2 id="類題">類題</h2>
+<p>区間\([L, R)\)に対して、各要素\(k\)個まで数える．</p>
+<ul>
+<li>\(p_i\)の定義を、&quot;\(a_i = a_j, j &lt; i\)となる\(k\)番目の\(j\)&ldquo;に変更すれば良いです．</li>
+</ul>
+<h2 id="参考">参考</h2>
+<p>必要な部分のみ作るセグメント木の例</p>
+<ul>
+<li><a href="https://www.hamayanhamayan.com/entry/2017/12/09/015937">セグメントツリーにセグメントツリーを乗せる手法（2Dセグメントツリー）</a></li>
 </ul>
 
 		</div>
@@ -116,15 +133,9 @@
 
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="https://fumiphys.github.io/posts/about_me/about_me/" rel="prev">
+		<a class="post-nav__link" href="https://fumiphys.github.io/posts/competitive_programming/donuts_2015_3/" rel="prev">
 			<span class="post-nav__caption">«&thinsp;Previous</span>
-			<p class="post-nav__post-title">About Me</p>
-		</a>
-	</div>
-	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="https://fumiphys.github.io/posts/competitive_programming/number_of_types_query/" rel="next">
-			<span class="post-nav__caption">Next&thinsp;»</span>
-			<p class="post-nav__post-title">区間の種類数を答えるクエリ</p>
+			<p class="post-nav__post-title">Donutsプロコンチャレンジ2015 C - 行列のできるドーナツ屋</p>
 		</a>
 	</div>
 </nav>

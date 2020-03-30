@@ -6,10 +6,19 @@
     <description>Recent content in Competitive Programming on fumiphys&#39; blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 30 Mar 2020 18:30:25 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2020 19:53:20 +0900</lastBuildDate>
     
 	<atom:link href="https://fumiphys.github.io/tags/competitive-programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>区間の種類数を答えるクエリ</title>
+      <link>https://fumiphys.github.io/posts/competitive_programming/number_of_types_query/</link>
+      <pubDate>Mon, 30 Mar 2020 19:53:20 +0900</pubDate>
+      
+      <guid>https://fumiphys.github.io/posts/competitive_programming/number_of_types_query/</guid>
+      <description>問題設定 以下のようなクエリを考えます． \(n\)要素の配列\(a\)が与えられる． 各クエリでは、\([L, R)\)に含まれる数列\(a\)の</description>
+    </item>
     
     <item>
       <title>Donutsプロコンチャレンジ2015 C - 行列のできるドーナツ屋</title>
