@@ -4,19 +4,19 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Tenka1 Programming Contest 2019 E - fumiphys&#39; blog</title>
+	<title>About This Site - fumiphys&#39; blog</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Tenka1 Programming Contest 2019 E">
-	<meta property="og:title" content="Tenka1 Programming Contest 2019 E" />
-<meta property="og:description" content="Tenka1 Programming Contest 2019 E" />
+	<meta name="description" content="About Me">
+	<meta property="og:title" content="About This Site" />
+<meta property="og:description" content="About Me" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://fumiphys.github.io/posts/competitive_programming/tenka1_2019_e/" />
-<meta property="article:published_time" content="2020-04-04T19:11:48+09:00" />
-<meta property="article:modified_time" content="2020-04-04T19:11:48+09:00" />
+<meta property="og:url" content="https://fumiphys.github.io/posts/about_me/about_this_site/" />
+<meta property="article:published_time" content="2020-04-12T15:36:24+09:00" />
+<meta property="article:modified_time" content="2020-04-12T15:36:24+09:00" />
 
 	<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tenka1 Programming Contest 2019 E"/>
-<meta name="twitter:description" content="Tenka1 Programming Contest 2019 E"/>
+<meta name="twitter:title" content="About This Site"/>
+<meta name="twitter:description" content="About Me"/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -60,7 +60,7 @@ if (!doNotTrack) {
 				
 			</a>
 		</li>
-		<li class="menu__item">
+		<li class="menu__item menu__item--active">
 			<a class="menu__link" href="https://fumiphys.github.io/posts/about_me/about_this_site/">
 				
 				<span class="menu__text">About This Site</span>
@@ -78,7 +78,7 @@ if (!doNotTrack) {
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Tenka1 Programming Contest 2019 E</h1>
+			<h1 class="post__title">About This Site</h1>
 			
 		</header>
 <div class="post__toc toc">
@@ -86,32 +86,28 @@ if (!doNotTrack) {
 	<div class="toc__menu">
 		<nav id="TableOfContents">
   <ul>
-    <li><a href="#問題概要">問題概要</a></li>
-    <li><a href="#解法">解法</a></li>
+    <li><a href="#このサイトの目的">このサイトの目的</a></li>
+    <li><a href="#このサイトについて">このサイトについて</a></li>
+    <li><a href="#運営者">運営者</a></li>
   </ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
-			<h2 id="問題概要">問題概要</h2>
+			<h2 id="このサイトの目的">このサイトの目的</h2>
 <ul>
-<li><a href="https://atcoder.jp/contests/tenka1-2019/tasks/tenka1_2019_e">Link</a></li>
-<li>\(n\)次の多項式が与えられるので、どんな数\(x\)を入れても\(f(x)\)が\(p\)で割り切れるような素数\(p\)を列挙せよ.</li>
+<li>プログラミング(主に競技プログラミング)において、自分がメモを残しておきたいと思った事柄をまとめています. いわゆる備忘録です.</li>
+<li>websiteを作る練習も兼ねています.</li>
+<li>そのうち競技プログラミングに限らず自分の知った色々な知見をまとめたいという気持ちはあります.</li>
 </ul>
-<h2 id="解法">解法</h2>
+<h2 id="このサイトについて">このサイトについて</h2>
 <ul>
-<li>すぐに思いつくのは、\(a_0\)から候補を絞って&hellip;とやっていく方法だが、判定も含めて間に合いそうにないし、\(a_0 = 0, \sum a_i = 0\)とかだと困る.</li>
-<li>まず、係数のGCDの素因数は、必ず答えに入ることが分かる.</li>
-<li>その他の候補を考える. 素数\(p\)が条件を満たすとき,
-$$
-f(x) \equiv 0 \ (x = 0, 1, \cdots, p-1)
-$$
-が成立する．ゆえに、
-$$
-f(x) = Q(x)x(x-1)\cdots (x-(p-1)) = Q(x)(x^p - x)
-$$
-が成立する．ここで右の変形はフェルマーの小定理により\(0, 1, \cdots , p-1\)が\((x^p - x=0)\)の解であることからわかる．</li>
-<li>結局、\(f(x)\)が\(x^p-x\)で割り切れるpを探せば良いが、pは高々\(f(x)\)の次数で抑えられるので、間に合う.</li>
+<li>このサイトは<a href="https://gohugo.io/">Hugo</a>で作られています.</li>
+<li>ソースコードはこちら(<a href="https://github.com/fumiphys/fumiphys.github.io">GitHub</a>)</li>
+</ul>
+<h2 id="運営者">運営者</h2>
+<ul>
+<li><a href="https://fumiphys.github.io/posts/about_me/about_me">About Me</a>をご覧ください.</li>
 </ul>
 
 		</div>
@@ -121,7 +117,7 @@ $$
 	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
 	<ul class="tags__list">
 		<li class="tags__item">
-			<a class="tags__link btn" href="https://fumiphys.github.io/tags/competitive-programming/" rel="tag">Competitive Programming</a>
+			<a class="tags__link btn" href="https://fumiphys.github.io/tags/about-me/" rel="tag">About Me</a>
 		</li>
 	</ul>
 </div>
@@ -132,14 +128,8 @@ $$
 
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="https://fumiphys.github.io/posts/competitive_programming/number_of_types_query/" rel="prev">
+		<a class="post-nav__link" href="https://fumiphys.github.io/posts/competitive_programming/yahoo_procon2019_qual_e/" rel="prev">
 			<span class="post-nav__caption">«&thinsp;Previous</span>
-			<p class="post-nav__post-title">区間の種類数を答えるクエリ</p>
-		</a>
-	</div>
-	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="https://fumiphys.github.io/posts/competitive_programming/yahoo_procon2019_qual_e/" rel="next">
-			<span class="post-nav__caption">Next&thinsp;»</span>
 			<p class="post-nav__post-title">みんなのプロコン2019予選 E - Odd Subrectangles</p>
 		</a>
 	</div>

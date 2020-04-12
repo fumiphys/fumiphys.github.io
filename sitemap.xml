@@ -3,8 +3,38 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://fumiphys.github.io/tags/about-me/</loc>
+    <lastmod>2020-04-12T15:36:24+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fumiphys.github.io/categories/about-me/</loc>
+    <lastmod>2020-04-12T15:36:24+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fumiphys.github.io/posts/about_me/about_this_site/</loc>
+    <lastmod>2020-04-12T15:36:24+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://fumiphys.github.io/categories/</loc>
-    <lastmod>2020-04-12T15:13:01+09:00</lastmod>
+    <lastmod>2020-04-12T15:36:24+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fumiphys.github.io/</loc>
+    <lastmod>2020-04-12T15:36:24+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fumiphys.github.io/posts/</loc>
+    <lastmod>2020-04-12T15:36:24+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fumiphys.github.io/tags/</loc>
+    <lastmod>2020-04-12T15:36:24+09:00</lastmod>
   </url>
   
   <url>
@@ -14,21 +44,6 @@
   
   <url>
     <loc>https://fumiphys.github.io/categories/competitive-programming/</loc>
-    <lastmod>2020-04-12T15:13:01+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://fumiphys.github.io/</loc>
-    <lastmod>2020-04-12T15:13:01+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://fumiphys.github.io/posts/</loc>
-    <lastmod>2020-04-12T15:13:01+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://fumiphys.github.io/tags/</loc>
     <lastmod>2020-04-12T15:13:01+09:00</lastmod>
   </url>
   
@@ -50,16 +65,6 @@
   <url>
     <loc>https://fumiphys.github.io/posts/competitive_programming/donuts_2015_3/</loc>
     <lastmod>2020-03-30T18:30:25+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://fumiphys.github.io/tags/about-me/</loc>
-    <lastmod>2020-03-26T16:38:13+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://fumiphys.github.io/categories/about-me/</loc>
-    <lastmod>2020-03-26T16:38:13+09:00</lastmod>
   </url>
   
   <url>

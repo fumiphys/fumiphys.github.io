@@ -6,10 +6,19 @@
     <description>Recent content on fumiphys&#39; blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 12 Apr 2020 15:13:01 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2020 15:36:24 +0900</lastBuildDate>
     
 	<atom:link href="https://fumiphys.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About This Site</title>
+      <link>https://fumiphys.github.io/posts/about_me/about_this_site/</link>
+      <pubDate>Sun, 12 Apr 2020 15:36:24 +0900</pubDate>
+      
+      <guid>https://fumiphys.github.io/posts/about_me/about_this_site/</guid>
+      <description>このサイトの目的 プログラミング(主に競技プログラミング)において、自分がメモを残しておきたいと思った事柄をまとめています. いわゆる備忘録です</description>
+    </item>
     
     <item>
       <title>みんなのプロコン2019予選 E - Odd Subrectangles</title>
