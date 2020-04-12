@@ -6,10 +6,19 @@
     <description>Recent content in Competitive Programming on fumiphys&#39; blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 04 Apr 2020 19:11:48 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2020 15:13:01 +0900</lastBuildDate>
     
 	<atom:link href="https://fumiphys.github.io/categories/competitive-programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>みんなのプロコン2019予選 E - Odd Subrectangles</title>
+      <link>https://fumiphys.github.io/posts/competitive_programming/yahoo_procon2019_qual_e/</link>
+      <pubDate>Sun, 12 Apr 2020 15:13:01 +0900</pubDate>
+      
+      <guid>https://fumiphys.github.io/posts/competitive_programming/yahoo_procon2019_qual_e/</guid>
+      <description>問題概要 Link 0, 1からなる行列が与えられる. 行、列の部分集合をそれぞれ選ぶ\(2^{N+M}\)のうち、行、列ともに部分集合に含まれる成分の和が</description>
+    </item>
     
     <item>
       <title>Tenka1 Programming Contest 2019 E</title>

@@ -4,19 +4,19 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Tenka1 Programming Contest 2019 E - fumiphys&#39; blog</title>
+	<title>みんなのプロコン2019予選 E - Odd Subrectangles - fumiphys&#39; blog</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Tenka1 Programming Contest 2019 E">
-	<meta property="og:title" content="Tenka1 Programming Contest 2019 E" />
-<meta property="og:description" content="Tenka1 Programming Contest 2019 E" />
+	<meta name="description" content="みんなのプロコン2019予選 E">
+	<meta property="og:title" content="みんなのプロコン2019予選 E - Odd Subrectangles" />
+<meta property="og:description" content="みんなのプロコン2019予選 E" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://fumiphys.github.io/posts/competitive_programming/tenka1_2019_e/" />
-<meta property="article:published_time" content="2020-04-04T19:11:48+09:00" />
-<meta property="article:modified_time" content="2020-04-04T19:11:48+09:00" />
+<meta property="og:url" content="https://fumiphys.github.io/posts/competitive_programming/yahoo_procon2019_qual_e/" />
+<meta property="article:published_time" content="2020-04-12T15:13:01+09:00" />
+<meta property="article:modified_time" content="2020-04-12T15:13:01+09:00" />
 
 	<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tenka1 Programming Contest 2019 E"/>
-<meta name="twitter:description" content="Tenka1 Programming Contest 2019 E"/>
+<meta name="twitter:title" content="みんなのプロコン2019予選 E - Odd Subrectangles"/>
+<meta name="twitter:description" content="みんなのプロコン2019予選 E"/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -71,7 +71,7 @@ if (!doNotTrack) {
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Tenka1 Programming Contest 2019 E</h1>
+			<h1 class="post__title">みんなのプロコン2019予選 E - Odd Subrectangles</h1>
 			
 		</header>
 <div class="post__toc toc">
@@ -88,23 +88,30 @@ if (!doNotTrack) {
 <div class="content post__content clearfix">
 			<h2 id="問題概要">問題概要</h2>
 <ul>
-<li><a href="https://atcoder.jp/contests/tenka1-2019/tasks/tenka1_2019_e">Link</a></li>
-<li>\(n\)次の多項式が与えられるので、どんな数\(x\)を入れても\(f(x)\)が\(p\)で割り切れるような素数\(p\)を列挙せよ.</li>
+<li><a href="https://atcoder.jp/contests/yahoo-procon2019-qual/tasks/yahoo_procon2019_qual_e">Link</a></li>
+<li>0, 1からなる行列が与えられる. 行、列の部分集合をそれぞれ選ぶ\(2^{N+M}\)のうち、行、列ともに部分集合に含まれる成分の和が奇数になるものは何通りか?</li>
 </ul>
 <h2 id="解法">解法</h2>
 <ul>
-<li>すぐに思いつくのは、\(a_0\)から候補を絞って&hellip;とやっていく方法だが、判定も含めて間に合いそうにないし、\(a_0 = 0, \sum a_i = 0\)とかだと困る.</li>
-<li>まず、係数のGCDの素因数は、必ず答えに入ることが分かる.</li>
-<li>その他の候補を考える. 素数\(p\)が条件を満たすとき,
-$$
-f(x) \equiv 0 \ (x = 0, 1, \cdots, p-1)
-$$
-が成立する．ゆえに、
-$$
-f(x) = Q(x)x(x-1)\cdots (x-(p-1)) = Q(x)(x^p - x)
-$$
-が成立する．ここで右の変形はフェルマーの小定理により\(0, 1, \cdots , p-1\)が\((x^p - x=0)\)の解であることからわかる．</li>
-<li>結局、\(f(x)\)が\(x^p-x\)で割り切れるpを探せば良いが、pは高々\(f(x)\)の次数で抑えられるので、間に合う.</li>
+<li>和が偶数になるものを全体から引くことを考える.</li>
+<li>列の部分集合を決めたとき、和が偶数になるような行の部分集合の決め方は以下のようになる.
+<ul>
+<li>全行の和が偶数: \(2^{N}\)通り</li>
+<li>ある行の和が奇数: \(2^{N-1}\)通り</li>
+</ul>
+</li>
+<li>よって、全行の和が偶数になるような列の部分集合の個数が数えられればOK.</li>
+<li>以下、\(\mathbf{F}_{2}\)で考える.</li>
+<li>列の部分集合を選ぶ -&gt; 入力の行列\(A\)に0, 1からなる\(M\)成分のベクトル\(x\)を作用させる, と対応させる.</li>
+<li>このとき、全行の和が偶数ということは、
+$$Ax = 0$$
+が成立するということである.</li>
+<li>言い換えると、\(x\)が線形変換\(A\)の\(Ker\)に含まれていれば良く、\(Ker\)の要素数を数える問題に帰着される.</li>
+<li>行列\(A\)のrankを\(r\)とすると、\(A\)を標準形にしたときに、前の\(r\)成分は必ず0でなくてはならない. 逆にその他の成分は任意に決められる.</li>
+<li>よって全行の和が偶数であるものの個数は\(2^{M-r}\)個である.</li>
+<li>最終的な答えは,
+$$ans = 2^{N+M} - (2^{M-r} * 2^{N} + (2^{M} - 2^{M-r}) * 2^{N-1})$$
+となる.</li>
 </ul>
 
 		</div>
@@ -125,15 +132,9 @@ $$
 
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="https://fumiphys.github.io/posts/competitive_programming/number_of_types_query/" rel="prev">
+		<a class="post-nav__link" href="https://fumiphys.github.io/posts/competitive_programming/tenka1_2019_e/" rel="prev">
 			<span class="post-nav__caption">«&thinsp;Previous</span>
-			<p class="post-nav__post-title">区間の種類数を答えるクエリ</p>
-		</a>
-	</div>
-	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="https://fumiphys.github.io/posts/competitive_programming/yahoo_procon2019_qual_e/" rel="next">
-			<span class="post-nav__caption">Next&thinsp;»</span>
-			<p class="post-nav__post-title">みんなのプロコン2019予選 E - Odd Subrectangles</p>
+			<p class="post-nav__post-title">Tenka1 Programming Contest 2019 E</p>
 		</a>
 	</div>
 </nav>
